@@ -11,9 +11,9 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-24">
+    <section className="py-24 px-24">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-12 mb-16">
+        <div className="flex flex-row gap-12 mb-16">
           <div className="lg:w-1/3">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <div>About me</div>
@@ -47,7 +47,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 gap-8">
           {services.map((service) => (
             <div key={service.id} className="border border-gray-600 p-6">
               <div className="text-sm mb-2">{service.id}.</div>

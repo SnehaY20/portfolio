@@ -29,7 +29,7 @@ const experiences = [
 
 export default function ExperienceSection() {
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-24">
+    <section className="py-24 px-24">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           {/* <h2 className="text-sm tracking-wider mb-4">[Work experience]</h2> */}
@@ -43,7 +43,7 @@ export default function ExperienceSection() {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-700 pb-6"
+              className="flex flex-row justify-between items-center border-b border-gray-700 pb-6"
             >
               <div>
                 <h3 className="text-2xl font-bold mb-2">{exp.company}</h3>

@@ -2,14 +2,14 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24">
+    <section className="min-h-screen flex flex-col justify-center px-24">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-tight mb-8">
+        <h1 className="text-8xl font-bold leading-tight mb-8">
           <div className="mb-2">A Frontend Developer</div>
     
         </h1>
 
-        <div className="text-xl md:text-2xl lg:text-3xl font-medium mb-8">
+        <div className="text-3xl font-medium mb-8">
           <div className="mb-2">Lorem ipsum dolor</div>
      
 
