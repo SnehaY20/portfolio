@@ -16,7 +16,7 @@ function HeroSection() {
               : "translate-y-20 opacity-0"
           }`}
         >
-          <h1 className="8xl font-bold leading-tight mb-8">
+          <h1 className="text-8xl font-bold leading-tight mb-8">
             <div className="mb-2">A Frontend Developer</div>
           </h1>
         </div>
