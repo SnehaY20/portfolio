@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer
       ref={ref}
-      className={`py-12 px-6 md:px-24 border-t border-gray-700 bg-black text-white transform transition-all duration-1000 ease-out ${
+      className={`py-12 px-24 border-t border-gray-700 bg-black text-white transform transition-all duration-800 ease-out ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
       }`}
     >

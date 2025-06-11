@@ -6,18 +6,18 @@ export default function ClientsSection() {
   const [logosRef, logosVisible] = useScrollAnimation(0.1);
 
   return (
-    <section className="p-6 md:p-24 bg-black text-white">
+    <section className="p-24 bg-black text-white">
       <div className="max-w-7xl mx-auto space-y-16">
         <div
           ref={titleRef}
-          className={`text-center space-y-4 transform transition-all duration-1000 ease-out ${
+          className={`text-center space-y-4 transform transition-all duration-800 ease-out ${
             titleVisible
               ? "translate-y-0 opacity-100"
               : "translate-y-20 opacity-0"
           }`}
         >
           {/* <h2 className="text-sm tracking-wider">[SELECTED CLIENTS]</h2> */}
-          <div className="text-4xl md:text-5xl font-bold">
+          <div className="text-5xl font-bold">
             <div>Some of my good projects</div>
             {/* <div>good projects</div> */}
           </div>
@@ -29,16 +29,20 @@ export default function ClientsSection() {
 
         {/* Client Logos Grid - Centered */}
         <div ref={logosRef} className="flex justify-center">
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-5 gap-8">
             {[...Array(5)].map((_, i) => (
               <div
                 key={i}
-                className={`aspect-square bg-gray-800 rounded-lg flex items-center justify-center w-24 h-24 transform transition-all duration-1000 ease-out hover:bg-gray-700 hover:scale-110 ${
+                className={`aspect-square bg-gray-800 rounded-lg flex items-center justify-center w-24 h-24 transform transition-all duration-800 ease-out hover:bg-gray-700 hover:scale-110 ${
                   logosVisible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-20 opacity-0"
                 }`}
-                style={{ transitionDelay: `${i * 100}ms` }}
+                style={{
+                  transitionDelay: logosVisible
+                    ? `${i * 100}ms`
+                    : `${(4 - i) * 100}ms`,
+                }}
               >
                 <div className="text-xs text-gray-400">LOGO</div>
               </div>

@@ -21,7 +21,7 @@ function ServicesSection() {
         <div className="flex flex-col lg:flex-row gap-12 mb-16">
           <div
             ref={titleRef}
-            className={`lg:w-1/3 transform transition-all duration-1000 ease-out ${
+            className={`lg:w-1/3 transform transition-all duration-800 ease-out ${
               titleVisible
                 ? "translate-x-0 opacity-100"
                 : "-translate-x-20 opacity-0"
@@ -35,10 +35,10 @@ function ServicesSection() {
 
           <div
             ref={contentRef}
-            className={`lg:w-2/3 transform transition-all duration-1000 ease-out delay-200 ${
+            className={`lg:w-2/3 transform transition-all duration-800 ease-out ${
               contentVisible
-                ? "translate-x-0 opacity-100"
-                : "translate-x-20 opacity-0"
+                ? "translate-x-0 opacity-100 transition-delay-200"
+                : "translate-x-20 opacity-0 transition-delay-0"
             }`}
           >
             <p className="text-xl font-medium mb-6">
@@ -70,12 +70,16 @@ function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={`border border-gray-600 p-6 transform transition-all duration-1000 ease-out hover:border-white hover:scale-105 ${
+              className={`border border-gray-600 p-6 transform transition-all duration-800 ease-out hover:border-white hover:scale-105 ${
                 cardsVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-20 opacity-0"
               }`}
-              style={{ transitionDelay: `${index * 200}ms` }}
+              style={{
+                transitionDelay: cardsVisible
+                  ? `${index * 150}ms`
+                  : `${(2 - index) * 150}ms`,
+              }}
             >
               <div className="text-sm mb-2">{service.id}.</div>
               <h3 className="text-xl font-medium">{service.title}</h3>
