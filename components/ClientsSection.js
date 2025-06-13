@@ -44,7 +44,7 @@ export default function ClientsSection() {
                     : `${(4 - i) * 100}ms`,
                 }}
               >
-                <div className="text-xs text-gray-400">LOGO</div>
+                {/* <div className="text-xs text-gray-400">LOGO</div> */}
               </div>
             ))}
           </div>

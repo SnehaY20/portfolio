@@ -37,22 +37,22 @@ function ExperienceSection() {
       <div className="max-w-7xl mx-auto">
         <div
           ref={titleRef}
-          className={`text-center mb-16 transform transition-all duration-800 ease-out ${
+          className={`text-center mb-16 transform transition-all duration-800 ease-out will-change-transform ${
             titleVisible
               ? "translate-y-0 opacity-100"
               : "translate-y-20 opacity-0"
           }`}
         >
-          <div className="text-4xl md:text-5xl font-bold">
-            <div>Work experience</div>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Work experience
+          </h2>
         </div>
 
         <div ref={itemsRef} className="space-y-12">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className={`flex lex-row justify-between items-center border-b border-gray-700 pb-6 transform transition-all duration-800 ease-out ${
+              className={`flex flex-row justify-between items-center border-b border-gray-700 pb-6 transform transition-all duration-800 ease-out will-change-transform ${
                 itemsVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-20 opacity-0"

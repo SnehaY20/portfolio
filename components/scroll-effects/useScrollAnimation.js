@@ -6,14 +6,18 @@ const useScrollAnimation = (threshold = 0.1) => {
 
   useEffect(() => {
     const currentRef = ref.current;
+    let timeout;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          setIsVisible(entry.isIntersecting);
+        }, 50); // 50ms debounce delay
       },
       {
         threshold,
-        rootMargin: "-10% 0px -10% 0px",
+        rootMargin: "0px 0px -5% 0px", // Less aggressive margins
       }
     );
 
@@ -22,6 +26,7 @@ const useScrollAnimation = (threshold = 0.1) => {
     }
 
     return () => {
+      clearTimeout(timeout);
       if (currentRef) {
         observer.unobserve(currentRef);
       }
