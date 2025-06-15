@@ -1,35 +1,40 @@
 import { useEffect, useRef, useState } from "react";
 
-const useScrollAnimation = (threshold = 0.1) => {
+const useScrollAnimation = (threshold = 0.2) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
-    const currentRef = ref.current;
-    let timeout;
+    const element = ref.current;
+    if (!element) return;
 
+    // Create intersection observer with rootMargin to trigger at custom threshold
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => {
-          setIsVisible(entry.isIntersecting);
-        }, 50); // 50ms debounce delay
+      (entries) => {
+        entries.forEach((entry) => {
+          // Only animate once and only when intersecting
+          if (entry.isIntersecting && !hasAnimated.current) {
+            setIsVisible(true);
+            hasAnimated.current = true;
+            // Optionally unobserve after animation to prevent re-triggering
+            observer.unobserve(element);
+          }
+        });
       },
       {
-        threshold,
-        rootMargin: "0px 0px -5% 0px", // Less aggressive margins
+        // Convert threshold to rootMargin
+        // threshold 0.2 means trigger when element is 20% into viewport
+        // So rootMargin should be negative to achieve this
+        rootMargin: `0px 0px -${(1 - threshold) * 100}% 0px`,
+        threshold: 0.01, // Very small threshold to detect entry
       }
     );
 
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
+    observer.observe(element);
 
     return () => {
-      clearTimeout(timeout);
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
+      observer.disconnect();
     };
   }, [threshold]);
 

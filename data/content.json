@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "name": "SNEHA YADAV",
+    "title": "Frontend Developer",
+    "subtitle": "CURRENTLY A FRONTEND DEVELOPER SPECIALIZING IN REACT & MODERN WEB TECHNOLOGIES",
+    "status": "Available for new opportunities"
+  },
+  "quickIntro": {
+    "label": "[QUICK INTRO]",
+    "title": [
+      "I ENABLE BRANDS, BUSINESSES",
+      "AND ENTREPRENEURS TO TRANSFORM",
+      "VISIONS INTO CAPTIVATING",
+      "EXPERIENCES, ALL DESIGNED",
+      "WITH THE USERS AT THE HELM."
+    ],
+    "description": "I'm a frontend developer, problem solver and tech enthusiast. I work with a diverse clientele across multiple industries, offering and applying in-depth technical expertise to help businesses succeed through innovative digital solutions."
+  },
+  "featuredProjects": {
+    "title": "Featured Projects",
+    "description": "IMMERSIVE DIGITAL SOLUTIONS UNIQUELY CREATED BASED ON USER-INSIGHTS AND MODERN DEVELOPMENT METHODOLOGIES. ALWAYS SETTING YOU APART FROM THE INDUSTRY.",
+    "items": [
+      {
+        "id": "01",
+        "title": "E-COMMERCE PLATFORM",
+        "tech": "React, Node.js, MongoDB"
+      },
+      {
+        "id": "02",
+        "title": "PORTFOLIO WEBSITE",
+        "tech": "Next.js, Tailwind CSS"
+      },
+      {
+        "id": "03",
+        "title": "MOBILE APPLICATION",
+        "tech": "React Native, Firebase"
+      },
+      {
+        "id": "04",
+        "title": "DASHBOARD ANALYTICS",
+        "tech": "Vue.js, D3.js, Express"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Work Experience",
+    "items": [
+      {
+        "company": "TECH STARTUP INC.",
+        "role": "SENIOR FRONTEND DEVELOPER",
+        "period": "2024 - NOW",
+        "location": "REMOTE"
+      },
+      {
+        "company": "DIGITAL AGENCY",
+        "role": "FRONTEND DEVELOPER",
+        "period": "2022 - 2024",
+        "location": "BANGALORE"
+      },
+      {
+        "company": "FREELANCE",
+        "role": "WEB DEVELOPER",
+        "period": "2020 - 2022",
+        "location": "INDIA"
+      }
+    ]
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "What I do",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "items": [
+      {
+        "title": "Web Development",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "title": "Mobile Development",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+      }
+    ]
+  },
+  "clients": {
+    "title": "Some of my good projects",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "items": [
+      {
+        "name": "Project 1",
+        "image": "/path/to/image1.jpg"
+      },
+      {
+        "name": "Project 2",
+        "image": "/path/to/image2.jpg"
+      },
+      {
+        "name": "Project 3",
+        "image": "/path/to/image3.jpg"
+      },
+      {
+        "name": "Project 4",
+        "image": "/path/to/image4.jpg"
+      },
+      {
+        "name": "Project 5",
+        "image": "/path/to/image5.jpg"
+      }
+    ]
+  },
+  "background": {
+    "title": "BACKGROUND",
+    "items": [
+      {
+        "year": "2025",
+        "description": "Lorem Ipsum"
+      }
+    ]
+  },
+  "footer": {
+    "name": "SNEHA YADAV",
+    "year": "2025"
+  }
+}

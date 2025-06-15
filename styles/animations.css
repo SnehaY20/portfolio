@@ -1,0 +1,19 @@
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Add hardware acceleration and prevent layout shifts */
+.animate-in,
+[class*="transition-all"] {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000;
+  -webkit-perspective: 1000;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  contain: layout style paint;
+}

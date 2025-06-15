@@ -3,10 +3,8 @@
 import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import HeroSection from "../components/HeroSection";
-import LargeTypographySection from "../components/LargeTypographySection";
-import ServicesSection from "../components/ServicesSection";
-import BackgroundSection from "../components/BackgroundSection";
-import ClientsSection from "../components/ClientsSection";
+import QuickIntroSection from "../components/QuickIntroSection";
+import FeaturedProjectsSection from "../components/FeaturedProjectsSection";
 import ExperienceSection from "../components/ExperienceSection";
 import Footer from "../components/Footer";
 
@@ -31,13 +29,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="bg-orange-50 text-black">
       <Navigation />
       <HeroSection />
-      <LargeTypographySection />
-      <ServicesSection />
-      <BackgroundSection />
-      <ClientsSection />
+      <QuickIntroSection />
+      <FeaturedProjectsSection />
       <ExperienceSection />
       <Footer />
     </div>

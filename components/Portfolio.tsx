@@ -378,9 +378,7 @@ function LargeTypographySection() {
             isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"
           }`}
         >
-          <div className="bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
-            CREATING MAGIC
-          </div>
+          
         </h2>
       </div>
     </section>
